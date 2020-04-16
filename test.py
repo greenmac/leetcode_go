@@ -1,3 +1,4 @@
+'''
 import asyncio
 
 async def hello():
@@ -10,3 +11,9 @@ loop = asyncio.get_event_loop()
 # 执行coroutine
 loop.run_until_complete(hello())
 loop.close()
+'''
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b
+print(c)
