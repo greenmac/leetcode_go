@@ -16,12 +16,16 @@ Example 2:
 Input: [4,1,2,1,2]
 Output: 4
 '''
+# XOR( ^= 相關解釋)
+# http://www.86duino.com/?p=1411&lang=TW
+# https://python-reference.readthedocs.io/en/latest/docs/operators/bitwise_XOR.html
+# https://medium.com/@hyWang/xor-%E4%BD%8D%E5%85%83%E9%81%8B%E7%AE%97%E5%AD%90-1c25b4ae15fb
 class Solution:
     def singleNumber(self, nums):
         for i in range(1, len(nums)):
             nums[0] ^= nums[i]            
         return nums[0]
-
+        
 Solution = Solution()
 nums_1 = [2,2,1]
 nums_2 = [4,1,2,1,2]
@@ -29,18 +33,3 @@ singleNumber_1 = Solution.singleNumber(nums_1)
 singleNumber_2 = Solution.singleNumber(nums_2)
 print(singleNumber_1)
 print(singleNumber_2)
-
-def singleNumber2(self, nums):
-    res = 0
-    for num in nums:
-        res ^= num
-    return res
-    
-def singleNumber3(self, nums):
-    return 2*sum(set(nums))-sum(nums)
-    
-def singleNumber4(self, nums):
-    return reduce(lambda x, y: x ^ y, nums)
-    
-def singleNumber(self, nums):
-    return reduce(operator.xor, nums)
