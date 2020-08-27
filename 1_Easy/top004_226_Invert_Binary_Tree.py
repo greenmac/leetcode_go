@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/invert-binary-tree/
+# https://leetcode.com/problems/invert-binary-tree/discuss/812839/Python-Recursive-Simple-Solution
 
 '''
 Invert a binary tree.
